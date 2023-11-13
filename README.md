@@ -1,57 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generic Database Proxy</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+Generic Database Proxy
+Overview
+The Generic Database Proxy is a versatile REST API designed to handle CRUD (Create, Read, Update, Delete) operations on a SQL database without prior knowledge of the database schema. The project is implemented in JavaScript using Node.js and leverages a chosen server framework (e.g., Express) along with a SQL database (e.g., SQLite) to provide a flexible and dynamic database interaction layer.
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+Features
+Dynamic Schema Ingestion: The database proxy ingests schema files, allowing the system to create tables and add columns dynamically on every server startup. This enables adaptability to various database structures without manual intervention.
 
-        h1, h2 {
-            color: #333;
-        }
+RESTful API Endpoints: The API provides standard CRUD operations mapped to RESTful endpoints:
 
-        .api-section {
-            margin-top: 20px;
-        }
+POST /:collection for creating records
+GET /:collection/:id for retrieving a record by ID
+POST /:collection/:id for updating a record by ID
+DELETE /:collection/:id for deleting a record by ID
+Schema-Driven Operations: The API automatically checks for the existence of tables specified in the schema and creates or adds columns if not detected. This ensures that database operations align with the provided schema.
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Generic Database Proxy Interface</h1>
-
-        <div class="api-section">
-            <h2>API Endpoints</h2>
-            <ul>
-                <li><strong>POST:</strong> /:collection</li>
-                <li><strong>GET:</strong> /:collection/:id</li>
-                <li><strong>POST:</strong> /:collection/:id</li>
-                <li><strong>DELETE:</strong> /:collection/:id</li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+Choice of SQL Flavor: The project supports various SQL flavors, and you can configure it to work with databases like MySQL, Postgres, or use a local SQLite instance. The flexibility allows for easy integration with different SQL databases.

@@ -1,6 +1,6 @@
 # CrudApp
-<h5>Generic Database Proxy</h5>h5>
-<h2>Overview:</h2>h2>
+<h5>Generic Database Proxy</h5>
+<h2>Overview:</h2>
 The Generic Database Proxy is a versatile REST API designed to handle CRUD (Create, Read, Update, Delete) operations on a SQL database without prior knowledge of the database schema. The project is implemented in JavaScript using Node.js and leverages a chosen server framework (e.g., Express) along with a SQL database (e.g., SQLite) to provide a flexible and dynamic database interaction layer.
 
 Features

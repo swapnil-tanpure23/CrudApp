@@ -1,0 +1,13 @@
+{
+    "users": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "email": "TEXT"
+    },
+    "products": {
+      "id": "INTEGER PRIMARY KEY",
+      "name": "TEXT",
+      "price": "REAL"
+    }
+  }
+  
